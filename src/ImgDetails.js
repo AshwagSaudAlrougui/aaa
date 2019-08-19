@@ -5,9 +5,9 @@ class ImgDetails extends Component {
 
     render() {
         return (
-            <div className="card">
+            <div class="card">
        
-                <p>{this.props.imgDetails.scene_text}</p>
+                <p class="fade">{this.props.imgDetails.scene_text}</p>
             </div>
         )
     }

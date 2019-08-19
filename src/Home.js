@@ -1,22 +1,18 @@
-
 import React ,{Component} from  'react';
 import axios from 'axios';
-import ImgDetails from './ImgDetails'
-import StoryData from './StoryData'
+import Scene from './Scene';
 import './Home.css';
-import YouTube from './YouTube'
-import Drama from './Drama'
-import { Switch,Route, Link, BrowserRouter as Router } from 'react-router-dom'
+
+import NewScene from './NewScene';
 export * from "react-router";
 
-let index=1;
 
 class Home extends Component {
 
   state = {
     currentIndex: 1,
-  scene: {}
-
+    scene: {},
+    isEnd: false
 
   }
 
@@ -24,13 +20,15 @@ class Home extends Component {
 
   Next() {
 
-    
+    if (this.state.scene.right_id == null)
+    this.setState({isEnd: true})
+    else{
       this.setState({
         currentIndex: this.state.scene.right_id
       
       })
-    console.log(this.state.currentIndex)
-this.callApi(this.state.scene.right_id)
+      this.callApi(this.state.scene.right_id)
+    }
   }
 
   callApi(id){
@@ -54,7 +52,9 @@ this.callApi(this.state.scene.right_id)
  
       })
       console.log(this.state.currentIndex)
-this.callApi(this.state.scene.left_id)
+      this.callApi(this.state.scene.left_id)
+      console.log(this.state.scene.id)
+    
     
   }
 
@@ -66,46 +66,23 @@ this.callApi(this.state.scene.left_id)
     }).then(response => {
       
       this.setState({scene: response.data}) 
-      console.log(this.state.scene);
+      console.log(this.state.scene.id);
     
     }).catch(error => console.log(error));
   }
 
 
   render() {
+    
+    if (this.state.isEnd){
 
-    return (
-      <div class ='center'>
-      
 
-      <div class="ui inverted segment">
-        <ImgDetails imgDetails={this.state.scene} />
-  
- 
-  <h4 class="ui horizontal inverted divider">
-    Choose
-  </h4>
-</div>
+    return <NewScene/> 
+    }
+    else{
 
-        <div class="ui segment">
-  <div class="ui two column very relaxed grid">
-    <div class="column">
-    <button class='ui button' onClick={() => this.Prev()}> {this.state.scene.left_text} </button>
-
-    </div>
-    <div class="column">
-    <button class='ui button' onClick={() => this.Next()}> {this.state.scene.right_text} </button> 
-
-    </div>
-  </div>
-  <div class="ui vertical divider">
-    or
-  </div>
-</div>
-
-     
-      </div>
-    );
+    return <Scene scene={this.state.scene}/>
+    }
   }
 }
 
