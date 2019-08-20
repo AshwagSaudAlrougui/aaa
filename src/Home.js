@@ -4,6 +4,7 @@ import Scene from './Scene';
 import './Home.css';
 
 import NewScene from './NewScene';
+// import console = require('console');
 export * from "react-router";
 
 
@@ -39,7 +40,7 @@ class Home extends Component {
     }).then(response => {
       
       this.setState({scene: response.data}) 
-      console.log(this.state.scene);
+      //console.log(this.state.scene);
     
     }).catch(error => console.log(error));
   }
@@ -66,20 +67,23 @@ class Home extends Component {
     }).then(response => {
       
       this.setState({scene: response.data}) 
-      console.log(this.state.scene.id);
+      //console.log(this.state.scene.id);
     
     }).catch(error => console.log(error));
   }
 
 
   render() {
-    
-    if (this.state.isEnd){
+    //console.log("hi")
+    if ((this.state.scene.id===null)){
+      //this.state.scene.id === this.state.currentIndex
+      //console.log("hi")
 
 
     return <NewScene/> 
     }
     else{
+      console.log("bye")
 
     return <Scene scene={this.state.scene}/>
     }
