@@ -18,10 +18,10 @@ constructor(props){
 
     render()
      {
-
+console.log(this.props.prev)
         return (
             <div>
-                     <button class='ui button' onClick={() => this.props.prev()}> {this.props.data} </button>
+                     <button class='ui button' onClick={this.props.prev}> {this.props.data} </button>
 
             </div>
         )
