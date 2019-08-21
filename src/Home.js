@@ -7,7 +7,7 @@ import LeftButton from './LeftButton'
 import StoryData from './StoryData'
 import './Home.css';
 import YouTube from './YouTube'
-import Drama from './Drama'
+import './Nav.css';
 import { Switch,Route, Link, BrowserRouter as Router } from 'react-router-dom'
 import NewScene from './NewScene';
 import Scene from './Scene';

@@ -3,8 +3,17 @@ import React ,{Component} from  'react';
 import Card from 'react-bootstrap/Card'
 import CardDeck from 'react-bootstrap/CardDeck'
 import CardGroup from 'react-bootstrap/CardGroup'
+import Home from './Home'
+import Home from './Home'
+
 import './AboutUs.css';
+// import {BrowserHistory} from 'react-router'
+// export * from "react-router";
 class AboutUs extends Component{
+// Homee(){
+//   BrowserHistory.push('/Home');
+// }
+
 render(){
 
     return(
@@ -14,7 +23,7 @@ render(){
 
 
 
-
+<Aduio />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
 <link
   rel="stylesheet"
@@ -22,17 +31,17 @@ render(){
   integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
   crossorigin="anonymous"
 />
-<script src="https://unpkg.com/react/umd/react.production.min.js" crossorigin />
+{/* <script src="https://unpkg.com/react/umd/react.production.min.js" crossorigin /> */}
 
-<script
+{/* <script
   src="https://unpkg.com/react-dom/umd/react-dom.production.min.js"
   crossorigin
-/>
+/> */}
 
-<script
+{/* <script
   src="https://unpkg.com/react-bootstrap@next/dist/react-bootstrap.min.js"
   crossorigin
-/>
+/> */}
 
 
   
@@ -92,6 +101,8 @@ render(){
       </Card.Footer>
     </Card>
   </CardGroup>
+
+  {/* <a href="/">home</a> */}
 </div>
 
 

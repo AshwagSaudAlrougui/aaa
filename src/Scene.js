@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import ImgDetails from './ImgDetails'
 import RightButton from './RightButton'
 import LeftButton from './LeftButton'
+import './Scene.css'
+
 export default class Scene extends Component {
     render() {
         return (
