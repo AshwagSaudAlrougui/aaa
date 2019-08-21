@@ -1,12 +1,12 @@
 <h1 align="center"> Title </h1>
 
 # Summary
-[project description]
+The website is for a story has many scences and each scene has two path that takes you to a new scene and so on. if the scene end the user can add a scene with two path next one.
 
 ---
 
 # Wireframe
-[wireframe images]
+![](/image/Page_1.png)
 
 # Website Screenshots
 [screenshots]
