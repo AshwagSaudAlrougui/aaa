@@ -1,10 +1,5 @@
-
 import React ,{Component} from  'react';
 import axios from 'axios';
-import ImgDetails from './ImgDetails'
-import RightButton from './RightButton'
-import LeftButton from './LeftButton'
-import StoryData from './StoryData'
 import './Home.css';
 import YouTube from './YouTube'
 import './Nav.css';
@@ -18,7 +13,9 @@ let apiCallCount = 0;
 class Home extends Component {
 
   state = {
-    id: 62,
+    id: 77,
+    prev_id: 77,
+    
   scene: {},
   isEnd: false,
   isLeft: true,
@@ -29,7 +26,7 @@ class Home extends Component {
 
   updateView = (id1) => {
     
-    console.log(this.state.id)
+    //console.log(this.state.id)
     axios({
       method: 'GET',
       url: `https://cors-anywhere.herokuapp.com/https://aaa-api.herokuapp.com/scenes/${id1}.json`
@@ -71,7 +68,7 @@ class Home extends Component {
               id: this.state.scene.right_id
             
             })
-      console.log(this.state.id)
+      //console.log(this.state.id)
   this.callApi(this.state.scene.right_id)
     }
 
@@ -126,6 +123,42 @@ this.callApi(this.state.scene.left_id)
 
 
 
+
+  }
+  callApiBack(id){
+
+    axios({
+      method: 'GET',
+      url: `https://cors-anywhere.herokuapp.com/https://aaa-api.herokuapp.com/scenes/${id}.json`
+    }).then(response => {
+      
+      this.setState({scene: response.data}) 
+    
+    }).catch(error => console.log(error));
+  }
+  Back =  () => {
+
+    if (this.state.scene.prev_id){
+   
+    const scene =  this.state.scene
+  
+        this.setState({
+          scene: scene
+        
+        })
+          this.setState({
+            id: this.state.scene.prev_id
+          
+          })
+    //console.log(this.state.id)
+this.callApiBack(this.state.scene.prev_id)
+        }
+        
+        
+
+
+
+
   }
 
   componentDidMount(){
@@ -141,7 +174,7 @@ this.callApi(this.state.scene.left_id)
     }).then(response => {
       
       this.setState({scene: response.data}) 
-      console.log(this.state.scene);
+      //console.log(this.state.scene.id);
     
     }).catch(error => console.log(error));
   }
@@ -151,7 +184,7 @@ this.callApi(this.state.scene.left_id)
     if (this.state.isEnd)
       return <NewScene isLeft={this.state.isLeft} id={this.state.newID} updateView={this.updateView}/>
       else
-      return <Scene scene={this.state.scene} prev={this.Prev} next={this.Next}/>
+      return <Scene scene={this.state.scene} prev={this.Prev} next={this.Next} back={this.Back}/>
     
   }
 }
