@@ -8,6 +8,10 @@ import './Scene.css'
 
 
 export default class Scene extends Component {
+  _refreshPage() {
+    console.log("Clicked");
+    window.location.reload();
+  }
  
     render() {
         return (
@@ -39,10 +43,26 @@ export default class Scene extends Component {
           or
         </div>
       </div>
-          <Back back={this.props.back}/>
+      <div class="ui centered two column grid">
+
+        <div class="column">
+          <Back back={this.props.back} id={this.props.scene.prev_id}/>
+        </div>
+
+        </div>
+        <div class="ui segment">
+
+        <div class="ui centered two column grid">
+        
+        < button onClick = {this._refreshPage} > Go to the beginning of time </button>
+        
+        </div>
+        
+        </div>
+      
         
            
-            </div>
+      </div>
           );
     }
 }

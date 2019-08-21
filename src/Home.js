@@ -10,8 +10,8 @@ let apiCallCount = 0;
 class Home extends Component {
 
   state = {
-    id: 77,
-    prev_id: 77,
+    id: 85,
+    prev_id: 85,
     
   scene: {},
   isEnd: false,
@@ -85,7 +85,7 @@ class Home extends Component {
       method: 'GET',
       url: `https://cors-anywhere.herokuapp.com/https://aaa-api.herokuapp.com/scenes/${id}.json`
     }).then(response => {
-      
+      console.log(response)
       this.setState({scene: response.data}) 
     
     }).catch(error => console.log(error));
@@ -122,39 +122,24 @@ this.callApi(this.state.scene.left_id)
 
 
   }
-  callApiBack(id){
-
-    axios({
-      method: 'GET',
-      url: `https://cors-anywhere.herokuapp.com/https://aaa-api.herokuapp.com/scenes/${id}.json`
-    }).then(response => {
-      
-      this.setState({scene: response.data}) 
-    
-    }).catch(error => console.log(error));
-  }
-  Back =  () => {
-
-    if (this.state.scene.prev_id){
-   
-    const scene =  this.state.scene
   
-        this.setState({
-          scene: scene
+  Back =  (id1) => {
+console.log(id1)
+    // if (this.state.scene.prev_id){
+   
+    // const scene =  this.state.scene
+  
+    //     this.setState({
+    //       scene: scene
         
-        })
+    //     })
           this.setState({
-            id: this.state.scene.prev_id
+            id: id1
           
           })
     //console.log(this.state.id)
-this.callApiBack(this.state.scene.prev_id)
-        }
+this.updateView(id1)
         
-        
-
-
-
 
   }
 
@@ -179,13 +164,9 @@ this.callApiBack(this.state.scene.prev_id)
 
   render() {
     if (this.state.isEnd)
-      return <NewScene isLeft={this.state.isLeft} id={this.state.newID} updateView={this.updateView}/>
+      return <NewScene isLeft={this.state.isLeft} id={this.state.scene.id} updateView={this.updateView} back={this.Back}/>
       else
-<<<<<<< HEAD
-      return <Scene scene={this.state.scene} prev={this.Prev} next={this.Next} back={this.Back}/>
-=======
       return <Scene scene={this.state.scene} leftChoice={this.leftChoice} rightChoice={this.rightChoice} back={this.Back}/>
->>>>>>> azzam-dev
     
   }
 }
