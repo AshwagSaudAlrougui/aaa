@@ -4,6 +4,10 @@ import RightButton from './RightButton'
 import LeftButton from './LeftButton'
 import Back from './Back';
 export default class Scene extends Component {
+  _refreshPage() {
+    console.log("Clicked");
+    window.location.reload();
+  }
  
     render() {
         return (
@@ -35,10 +39,22 @@ export default class Scene extends Component {
           or
         </div>
       </div>
+      <div class="ui centered two column grid">
+
+        <div class="column">
           <Back back={this.props.back}/>
+        </div>
+
+        </div>
+        <div class="ui centered two column grid">
+        <div>
+        < button onClick = {this._refreshPage} > Go to the beginning of time </button>
+        </div>
+        </div>
+      
         
            
-            </div>
+      </div>
           );
     }
 }
