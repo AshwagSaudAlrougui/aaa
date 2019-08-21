@@ -4,6 +4,7 @@ import RightButton from './RightButton'
 import LeftButton from './LeftButton'
 import Back from './Back';
 export default class Scene extends Component {
+ 
     render() {
         return (
             <div class ='center'>
@@ -35,6 +36,7 @@ export default class Scene extends Component {
         </div>
       </div>
           <Back back={this.props.back}/>
+        
            
             </div>
           );

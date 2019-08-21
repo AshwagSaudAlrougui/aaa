@@ -13,8 +13,8 @@ let apiCallCount = 0;
 class Home extends Component {
 
   state = {
-    id: 68,
-    prev_id: 68,
+    id: 77,
+    prev_id: 77,
     
   scene: {},
   isEnd: false,
@@ -26,7 +26,7 @@ class Home extends Component {
 
   updateView = (id1) => {
     
-    console.log(this.state.id)
+    //console.log(this.state.id)
     axios({
       method: 'GET',
       url: `https://cors-anywhere.herokuapp.com/https://aaa-api.herokuapp.com/scenes/${id1}.json`
@@ -68,7 +68,7 @@ class Home extends Component {
               id: this.state.scene.right_id
             
             })
-      console.log(this.state.id)
+      //console.log(this.state.id)
   this.callApi(this.state.scene.right_id)
     }
 
@@ -125,11 +125,11 @@ this.callApi(this.state.scene.left_id)
 
 
   }
-  callApiBack(prev_id){
+  callApiBack(id){
 
     axios({
       method: 'GET',
-      url: `https://cors-anywhere.herokuapp.com/https://aaa-api.herokuapp.com/scenes/${prev_id}.json`
+      url: `https://cors-anywhere.herokuapp.com/https://aaa-api.herokuapp.com/scenes/${id}.json`
     }).then(response => {
       
       this.setState({scene: response.data}) 
@@ -150,7 +150,7 @@ this.callApi(this.state.scene.left_id)
             id: this.state.scene.prev_id
           
           })
-    console.log(this.state.id)
+    //console.log(this.state.id)
 this.callApiBack(this.state.scene.prev_id)
         }
         
