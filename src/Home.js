@@ -1,14 +1,11 @@
 import React ,{Component} from  'react';
 import axios from 'axios';
 import './Home.css';
-import YouTube from './YouTube'
 import './Nav.css';
-import { Switch,Route, Link, BrowserRouter as Router } from 'react-router-dom'
 import NewScene from './NewScene';
 import Scene from './Scene';
 export * from "react-router";
 
-let index=1;
 let apiCallCount = 0;
 class Home extends Component {
 
@@ -51,7 +48,7 @@ class Home extends Component {
  
   });
 
-  Next = ()=> {
+  rightChoice = ()=> {
 
     
     if(this.state.scene.right_id){
@@ -94,7 +91,7 @@ class Home extends Component {
     }).catch(error => console.log(error));
   }
 
-  Prev =  () => {
+  leftChoice =  () => {
 
     if (this.state.scene.left_id){
    
@@ -184,7 +181,7 @@ this.callApiBack(this.state.scene.prev_id)
     if (this.state.isEnd)
       return <NewScene isLeft={this.state.isLeft} id={this.state.newID} updateView={this.updateView}/>
       else
-      return <Scene scene={this.state.scene} prev={this.Prev} next={this.Next} back={this.Back}/>
+      return <Scene scene={this.state.scene} leftChoice={this.leftChoice} rightChoice={this.rightChoice} back={this.Back}/>
     
   }
 }

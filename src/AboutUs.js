@@ -1,11 +1,9 @@
 
 import React ,{Component} from  'react';
-import Card from 'react-bootstrap/Card'
-import CardDeck from 'react-bootstrap/CardDeck'
-import CardGroup from 'react-bootstrap/CardGroup'
-
-import Home from './Home'
-
+import Card from 'react-bootstrap/Card';
+import CardDeck from 'react-bootstrap/CardDeck';
+import CardGroup from 'react-bootstrap/CardGroup';
+import Home from './Home';
 import './AboutUs.css';
 // import {BrowserHistory} from 'react-router'
 // export * from "react-router";
@@ -22,8 +20,6 @@ render(){
 <div>
 
 
-
-<Aduio />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
 <link
   rel="stylesheet"
