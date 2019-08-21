@@ -24,7 +24,7 @@ class Fade3 extends React.Component {
             onFadeComplete()
           }
         } else {
-          opacity -= opacity * 0.1
+          opacity -= opacity * 0.07
           this.setState({opacity})
         }
       }, interval)
@@ -83,7 +83,7 @@ Fade3.propTypes = {
 
 Fade3.defaultProps = {
   in: false,
-  interval: 400,
+  interval: 200,
   delay: 18000
 }
  export default Fade3

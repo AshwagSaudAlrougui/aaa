@@ -13,10 +13,10 @@ import StarfieldAnimation from 'react-starfield-animation'
 import './FirstPage.css';
 
 
-const Bounce = styled.div`animation: 2s ${keyframes`${bounce}`} infinite`;
-const BounceIn = styled.div`animation: 2s ${keyframes`${bounceIn}`}infinite`;
+const Bounce = styled.div`animation: 1s ${keyframes`${bounce}`} infinite`;
+const BounceIn = styled.div`animation: 1s ${keyframes`${bounceIn}`}infinite`;
 // const FadeIn = styled.div`animation: 2s ${keyframes`${fadeIn}`} infinite`;
-const Pulse = styled.div`animation: 2s ${keyframes`${pulse}`} infinite`;
+const Pulse = styled.div`animation: 1s ${keyframes`${pulse}`} infinite`;
 
 
 

@@ -85,7 +85,7 @@ export default class NewScene extends Component {
             <div class="ui inverted segment">
                 <div style={{"paddingRight": "40%"}}>
             <p style={{"font-size": "30px"}}>The story ends here...</p>
-            <p style={{"textAlign": "right"}}>Continue your story</p>
+            <p style={{"textAlign": "right" , "font-size": "30px"} }>Continue your story</p>
             </div>
             <h4 class="ui horizontal inverted divider">
           Add
@@ -97,7 +97,7 @@ export default class NewScene extends Component {
       </div>
 
 
-      <div class="ui segment">
+      <div class="ui segment inverted">
         <div class="ui two column very relaxed grid">
           <div class="column">
           <Form.Field>
@@ -115,8 +115,8 @@ export default class NewScene extends Component {
   </Form.Field>
 
           </div>
-
-          <Button animated='fade' fluid onClick={this.addScene}>
+            
+          <Button color='black' animated='fade' fluid onClick={this.addScene}>
       <Button.Content visible>Submit your scene</Button.Content>
       <Button.Content hidden>Sounds intresting ^_^</Button.Content>
     </Button>
