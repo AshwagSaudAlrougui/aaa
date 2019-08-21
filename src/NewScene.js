@@ -83,15 +83,15 @@ export default class NewScene extends Component {
             
       
             <div class="ui inverted segment">
-                <div style={{"padding-right": "40%"}}>
-            <p>The story ends here...</p>
+                <div style={{"paddingRight": "40%"}}>
+            <p style={{"font-size": "30px"}}>The story ends here...</p>
             <p style={{"textAlign": "right"}}>Continue your story</p>
             </div>
             <h4 class="ui horizontal inverted divider">
           Add
         </h4>
         <Form>
-        <TextArea placeholder='Enter your part of the story here..' value= {this.state.scene_text} onChange= {(v) => this.handleSceneText(v)} />
+        <TextArea inverted placeholder='Enter your part of the story here..' value= {this.state.scene_text} onChange= {(v) => this.handleSceneText(v)} />
         </Form>
 
       </div>

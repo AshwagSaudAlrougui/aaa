@@ -5,14 +5,31 @@ import CardDeck from 'react-bootstrap/CardDeck';
 import CardGroup from 'react-bootstrap/CardGroup';
 import Home from './Home';
 import './AboutUs.css';
+import axios from 'axios';
 // import {BrowserHistory} from 'react-router'
 // export * from "react-router";
 class AboutUs extends Component{
-// Homee(){
-//   BrowserHistory.push('/Home');
-// }
+
+  state = {
+    azzam: '',
+    ashwaq:'',
+    abdullah:''
+  }
+
+  componentDidMount(){
+
+    axios.get('https://api.github.com/users/AlkhaldiAzzam').then(response => this.setState({azzam: response.avatar_url})).catch(error => console.log(error))
+    axios.get('https://api.github.com/users/ASSROUGUI').then(response => this.setState({ashwaq: response.avatar_url})).catch(error => console.log(error))
+    axios.get('https://api.github.com/users/aaltwaim').then(response => this.setState({abdullah: response.avatar_url})).catch(error => console.log(error))
+
+
+  }
 
 render(){
+
+
+
+
 
     return(
      
@@ -47,7 +64,7 @@ render(){
 <CardGroup>
     
     <Card>
-      <Card.Img variant="top" src="holder.js/100px160" />
+      <Card.Img variant="top" src= {this.state.azzam} />
       <Card.Body>
         <Card.Title>Azzam Alkhaldi</Card.Title>
         <Card.Text>
@@ -57,15 +74,13 @@ render(){
       <Card.Footer>
    
  <a href="https://github.com/AlkhaldiAzzam"><i class="fa fa-github"style={{ backgroundColor: 'white', color: 'black' }}></i></a> {''}
- <a href="#"><i class="fa fa-envelope"style={{ backgroundColor: 'white', color: '#A4C0E4' }}></i></a> {''}
-  <a href="#"><i class="fa fa-phone"style={{ backgroundColor: 'white', color: 'green' }}></i></a> {''}
   <a href="#"><i class="fa fa-linkedin"></i></a> {''}
 
   <p><div class="black">Contact</div></p>
       </Card.Footer>
     </Card>
     <Card>
-      <Card.Img variant="top" src="holder.js/100px160" />
+      <Card.Img variant="top" src= {this.state.ashwaq} />
       <Card.Body>
         <Card.Title>AShwag Alrougui</Card.Title>
         <Card.Text>
@@ -74,14 +89,12 @@ render(){
       </Card.Body>
       <Card.Footer>
       <a href="https://github.com/ASSROUGUI"><i class="fa fa-github"style={{ backgroundColor: 'white', color: 'black' }}></i></a> {''}
- <a href="#"><i class="fa fa-envelope"style={{ backgroundColor: 'white', color: '#A4C0E4' }}></i></a> {''}
-  <a href="#"><i class="fa fa-phone"style={{ backgroundColor: 'white', color: 'green' }}></i></a> {''}
   <a href="#"><i class="fa fa-linkedin"></i></a> {''}
   <p><div class="black">Contact</div></p>
       </Card.Footer>
     </Card>
     <Card>
-      <Card.Img variant="top" src="holder.js/100px160" />
+      <Card.Img variant="top" src= {this.state.abdullah} />
       <Card.Body>
         <Card.Title>Abdullah Aaltwaim</Card.Title>
         <Card.Text>
@@ -90,8 +103,6 @@ render(){
       </Card.Body>
       <Card.Footer>
       <a href="https://github.com/aaltwaim"><i class="fa fa-github"style={{ backgroundColor: 'white', color: 'black' }}></i></a> {''}
- <a href="#"><i class="fa fa-envelope"style={{ backgroundColor: 'white', color: '#A4C0E4' }}></i></a> {''}
-  <a href="#"><i class="fa fa-phone"style={{ backgroundColor: 'white', color: 'green' }}></i></a> {''}
   <a href="#"><i class="fa fa-linkedin"></i></a> {''}
   <p><div class="black">Contact</div></p>
       </Card.Footer>

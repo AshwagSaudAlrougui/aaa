@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import RightButton from './RightButton'
 import LeftButton from './LeftButton'
+import { Button , Segment} from 'semantic-ui-react';
 
 import Back from './Back';
 
@@ -17,7 +18,9 @@ export default class Scene extends Component {
         return (
             <div class ='center'>
             
-      
+            <div >
+          <Back back={this.props.back} id={this.props.scene.prev_id}/>
+        </div>
             <div class="ui inverted segment">
               <p>{this.props.scene.scene_text}</p>
         
@@ -27,7 +30,7 @@ export default class Scene extends Component {
         </h4>
       </div>
       
-              <div class="ui segment">
+              <div class="ui segment inverted">
         <div class="ui two column very relaxed grid">
           <div class="column">
           {/* <button class='ui button' onClick={() => this.Prev()}> {this.props.scene.left_text} </button> */}
@@ -45,20 +48,16 @@ export default class Scene extends Component {
       </div>
       <div class="ui centered two column grid">
 
-        <div class="column">
-          <Back back={this.props.back} id={this.props.scene.prev_id}/>
-        </div>
+        
 
         </div>
-        <div class="ui segment">
 
-        <div class="ui centered two column grid">
-        
-        < button onClick = {this._refreshPage} > Go to the beginning of time </button>
-        
+        <div >
+        <Segment inverted>
+        <Button  color='black' fluid  onClick = {this._refreshPage} > Go to the beginning of time </Button>
+        </Segment>
         </div>
         
-        </div>
       
         
            

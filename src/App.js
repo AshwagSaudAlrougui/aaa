@@ -8,6 +8,7 @@ import FirstPage from './FirstPage'
 
 import {
   BrowserRouter as Router,
+  HashRouter,
   Route,
   Link,
   Switch
@@ -21,7 +22,7 @@ import {
 export default function App() {
     return (
    
-      <Router>
+      <HashRouter>
       
       
   <Nav />
@@ -36,7 +37,7 @@ export default function App() {
           <Route component={FirstPage} />
           </Switch>
         </div>
-      </Router>
+      </HashRouter>
    
     );
   }

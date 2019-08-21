@@ -164,10 +164,18 @@ this.updateView(id1)
 
   render() {
     if (this.state.isEnd)
-      return <NewScene isLeft={this.state.isLeft} id={this.state.scene.id} updateView={this.updateView} back={this.Back}/>
+      return(
+        <div className="container">
+        
+        <NewScene isLeft={this.state.isLeft} id={this.state.scene.id} updateView={this.updateView} back={this.Back}/>
+        </div>
+        )
       else
-      return <Scene scene={this.state.scene} leftChoice={this.leftChoice} rightChoice={this.rightChoice} back={this.Back}/>
-    
+      return( 
+        <div className="scene">
+      <Scene scene={this.state.scene} leftChoice={this.leftChoice} rightChoice={this.rightChoice} back={this.Back}/>
+      </div>
+      )
   }
 }
 
