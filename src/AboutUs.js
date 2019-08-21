@@ -3,7 +3,7 @@ import React ,{Component} from  'react';
 import Card from 'react-bootstrap/Card'
 import CardDeck from 'react-bootstrap/CardDeck'
 import CardGroup from 'react-bootstrap/CardGroup'
-import Home from './Home'
+
 import Home from './Home'
 
 import './AboutUs.css';
