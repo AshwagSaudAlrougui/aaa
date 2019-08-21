@@ -15,7 +15,7 @@ export default class Scene extends Component {
             
       
             <div class="ui inverted segment">
-              <p>{this.props.scene.scene_text} </p>
+              <p>{this.props.scene.scene_text}</p>
         
        
         <h4 class="ui horizontal inverted divider">

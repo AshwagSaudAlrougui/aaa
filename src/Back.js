@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
+<<<<<<< HEAD
 import Home from './Home'
+=======
+>>>>>>> azzam-dev
 
 export default class Back extends Component {
 
@@ -17,4 +20,8 @@ export default class Back extends Component {
             </div>
         )
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> azzam-dev

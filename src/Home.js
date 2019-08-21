@@ -6,7 +6,6 @@ import NewScene from './NewScene';
 import Scene from './Scene';
 export * from "react-router";
 
-let index=1;
 let apiCallCount = 0;
 class Home extends Component {
 
@@ -182,7 +181,11 @@ this.callApiBack(this.state.scene.prev_id)
     if (this.state.isEnd)
       return <NewScene isLeft={this.state.isLeft} id={this.state.newID} updateView={this.updateView}/>
       else
+<<<<<<< HEAD
       return <Scene scene={this.state.scene} prev={this.Prev} next={this.Next} back={this.Back}/>
+=======
+      return <Scene scene={this.state.scene} leftChoice={this.leftChoice} rightChoice={this.rightChoice} back={this.Back}/>
+>>>>>>> azzam-dev
     
   }
 }

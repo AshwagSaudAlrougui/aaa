@@ -17,7 +17,6 @@ constructor(props){
 
     render()
      {
-console.log(this.props.prev)
         return (
             <div>
                 <Segment inverted>

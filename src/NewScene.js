@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
-import { Input , Segment  , Form , Button} from 'semantic-ui-react';
+import { Input , Segment  , Form , Button , TextArea} from 'semantic-ui-react';
 import axios from 'axios';
-
 export default class NewScene extends Component {
     state = {
         scene_text:'',
@@ -39,8 +38,13 @@ export default class NewScene extends Component {
         axios.post( 'https://cors-anywhere.herokuapp.com/https://aaa-api.herokuapp.com/scenes.json' , {
             "scene_text": this.state.scene_text,
             "left_text": this.state.left_text,
+<<<<<<< HEAD
             "right_text": this.state.right_text ,
             "prev_id":   this.props.id
+=======
+            "right_text": this.state.right_text,
+            "prev_id":   this.props.scene_id
+>>>>>>> azzam-dev
 
         }).then(response => {
 
@@ -90,8 +94,9 @@ export default class NewScene extends Component {
             <h4 class="ui horizontal inverted divider">
           Add
         </h4>
-        
-        <Input fluid icon='search' style={{"text-align": "center"}}  placeholder='Enter your part of the story here..' value= {this.state.scene_text} onChange= {(v) => this.handleSceneText(v)} />
+        <Form>
+        <TextArea placeholder='Enter your part of the story here..' value= {this.state.scene_text} onChange= {(v) => this.handleSceneText(v)} />
+        </Form>
 
       </div>
 
