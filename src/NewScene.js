@@ -39,8 +39,7 @@ export default class NewScene extends Component {
         axios.post( 'https://cors-anywhere.herokuapp.com/https://aaa-api.herokuapp.com/scenes.json' , {
             "scene_text": this.state.scene_text,
             "left_text": this.state.left_text,
-            "right_text": this.state.right_text ,
-            "prev_id":   this.props.id
+            "right_text": this.state.right_text    
 
         }).then(response => {
 
