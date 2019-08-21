@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { Input , Segment  , Form , Button , TextArea} from 'semantic-ui-react';
 import axios from 'axios';
+import Back from './Back';
 export default class NewScene extends Component {
     state = {
         scene_text:'',
@@ -39,7 +40,7 @@ export default class NewScene extends Component {
             "scene_text": this.state.scene_text,
             "left_text": this.state.left_text,
             "right_text": this.state.right_text,
-            "prev_id":   this.props.scene_id
+            "prev_id":   this.props.id
 
         }).then(response => {
 
@@ -122,6 +123,13 @@ export default class NewScene extends Component {
         </div>
       
       </div>
+      <div class="ui centered two column grid">
+
+<div class="column">
+  <Back back={this.props.back} id={this.props.id}/>
+</div>
+
+</div>
       
            
             </div>
