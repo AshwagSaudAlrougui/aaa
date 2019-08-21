@@ -6,6 +6,11 @@ import Home from './Home'
 
 export default class LeftButton extends Component {
 
+
+
+
+
+
 constructor(props){
     super(props)
 }
