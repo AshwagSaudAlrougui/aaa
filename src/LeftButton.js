@@ -5,11 +5,6 @@ import { Button , Segment} from 'semantic-ui-react';
 
 export default class LeftButton extends Component {
 
-
-
-
-
-
 constructor(props){
     super(props)
 }
