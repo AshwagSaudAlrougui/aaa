@@ -2,8 +2,14 @@ import React, { Component } from 'react'
 import ImgDetails from './ImgDetails'
 import RightButton from './RightButton'
 import LeftButton from './LeftButton'
-import { Button } from 'semantic-ui-react';
+
+import Back from './Back';
+
+import './Scene.css'
+
+
 export default class Scene extends Component {
+ 
     render() {
         return (
             <div class ='center'>
@@ -34,8 +40,8 @@ export default class Scene extends Component {
           or
         </div>
       </div>
-      <Button secondary onClick={this.props.back}>Back</Button>
-      
+          <Back back={this.props.back}/>
+        
            
             </div>
           );

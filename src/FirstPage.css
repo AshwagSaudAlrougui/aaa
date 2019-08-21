@@ -1,0 +1,27 @@
+h1{
+    margin-top: 505px;
+color:white;
+text-align: center;
+/* background: white; */
+padding-left: 555px;
+}
+.m{
+    background: white
+}
+
+element.style ,.h ,button{
+    color: white;
+    padding-left: 555px;
+    /* padding-bottom: 155px; */
+}
+.button{
+
+    margin-top: 505px;
+    color:white;
+    text-align: center;
+    /* background: white; */
+    padding-left: 555px;
+}
+a:hover{
+    text-decoration: none;
+}
