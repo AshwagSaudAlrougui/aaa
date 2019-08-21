@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Button , Segment} from 'semantic-ui-react';
 
 export default class Back extends Component {
 
@@ -10,9 +11,9 @@ export default class Back extends Component {
     render() {
         
         return (
-            <div>
-                <button class='ui button' onClick={()=>this.props.back(this.props.id)}> Back </button>
-            </div>
+                <Segment inverted>
+                <Button basic color='grey' onClick={()=>this.props.back(this.props.id)}> Back </Button>
+                </Segment>
         )
     }
 }
