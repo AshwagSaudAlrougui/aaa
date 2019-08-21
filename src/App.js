@@ -1,8 +1,11 @@
-import React from 'react';
-import Drama from './Drama';
-import Comedy from './Comedy'
-import Horror from './Horror'
+import React, { Component, Fragment } from 'react';
+import Home from './Home'
+import './Nav.css';
+import Nav from './Nav'
 import AboutUs from './AboutUs'
+import FirstPage from './FirstPage'
+
+
 import {
   BrowserRouter as Router,
   Route,
@@ -10,7 +13,7 @@ import {
   Switch
 } from 'react-router-dom';
 
-import Home from './Home'
+
 
 
 
@@ -19,25 +22,18 @@ export default function App() {
     return (
    
       <Router>
-        <nav>
-          <div class='grey'>
-          <Link to="/">Home</Link>{' '}
-          <Link to="/Drama">Drama</Link>{' '}
-          <Link to="/Comedy">Comedy </Link>{' '}
-          <Link to="/Horror">  Horror</Link>{' '}
-          <Link to="/AboutUs">AboutUs </Link>{' '}
-          </div>
-        </nav>
+      
+      
+  <Nav />
+     
   
         <div>
             <Switch>
           <Route exact path="/" component={Home} />
-          <Route path="/Drama" component={Drama} />
-          <Route path="/Comedy" component={Comedy} />
-          <Route path="/Horror" component={Horror} />
+          <Route path="/FirstPage" component={FirstPage} />
           <Route path="/AboutUs" component={AboutUs} />
      
-          <Route component={Home} />
+          <Route component={FirstPage} />
           </Switch>
         </div>
       </Router>
