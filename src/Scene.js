@@ -2,9 +2,14 @@ import React, { Component } from 'react'
 import ImgDetails from './ImgDetails'
 import RightButton from './RightButton'
 import LeftButton from './LeftButton'
+
+import Back from './Back';
+
 import './Scene.css'
 
+
 export default class Scene extends Component {
+ 
     render() {
         return (
             <div class ='center'>
@@ -35,7 +40,8 @@ export default class Scene extends Component {
           or
         </div>
       </div>
-      
+          <Back back={this.props.back}/>
+        
            
             </div>
           );
