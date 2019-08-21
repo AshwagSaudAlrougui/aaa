@@ -8,7 +8,7 @@ import Fade2 from './opacity2';
 import Fade3 from './opacity3';
 import Fade4 from './opacity4';
 import styled, { keyframes } from 'styled-components';
-
+import './FirstPage.css';
 import StarfieldAnimation from 'react-starfield-animation'
 import './FirstPage.css';
 
@@ -49,10 +49,10 @@ class FirstPage extends Component {
  Do you like reading novels or Do you have the ability to write a wonderful scenario for different stories that's mean this website built for you Share your creativity now <Bounce></Bounce>
 <Fade><h1 class='h'style={{color: 'white'}}>xxxx </h1></Fade> */} */}
 <Fade1><h1 style={{color: 'white'}}> Do you have a fertile imagination and love to read novels</h1></Fade1> */}
-<Fade2><h1 style={{color: 'white'}}>or Do you have the ability to write a wonderful scenario for different stories </h1></Fade2> 
-<Fade3><h1 style={{color: 'white'}}>that's mean this website built for you..<em> Share your creativity now..</em> </h1></Fade3> 
+<Fade2><h1 style={{color: 'white'}}>Or Do you have the ability to write a wonderful scenario for different stories </h1></Fade2> 
+<Fade3><h1 style={{color: 'white'}}>That's mean this website built for you..<em> Share your creativity here..</em> </h1></Fade3> 
 <Fade4>
-<a class='button'href="/"style={{color: 'white'}}> <em>Press here</em></a> 
+  <Link to='/'> <em>Press here</em></Link>
 </Fade4> 
 
  
