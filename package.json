@@ -13,6 +13,7 @@
     "react-dom": "^16.9.0",
     "react-fade-in": "^0.1.6",
     "react-fade-opacity": "^2.0.0",
+    "react-h5-audio-player": "^1.2.1",
     "react-howler": "^3.7.4",
     "react-native-video": "^5.0.0",
     "react-prism": "^4.3.2",
@@ -52,5 +53,5 @@
     ]
   },
   "devDependencies": {},
-  "homepage":"https://AlkhaldiAzzam.github.io/aaa"
+  "homepage": "https://AlkhaldiAzzam.github.io/aaa"
 }

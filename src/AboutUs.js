@@ -74,7 +74,9 @@ render(){
       <Card.Footer>
    
  <a href="https://github.com/AlkhaldiAzzam"><i class="fa fa-github"style={{ backgroundColor: 'white', color: 'black' }}></i></a> {''}
-  <a href="#"><i class="fa fa-linkedin"></i></a> {''}
+ <a href="mailto:azzamalkhaldi74@gmail.com"><i class="fa fa-envelope"style={{ backgroundColor: 'white', color: '#A4C0E4' }}></i></a> {''}
+
+  <a href="https://www.linkedin.com/in/azzamalkhaldi"><i class="fa fa-linkedin"></i></a> {''}
 
   <p><div class="black">Contact</div></p>
       </Card.Footer>
@@ -89,7 +91,9 @@ render(){
       </Card.Body>
       <Card.Footer>
       <a href="https://github.com/ASSROUGUI"><i class="fa fa-github"style={{ backgroundColor: 'white', color: 'black' }}></i></a> {''}
-  <a href="#"><i class="fa fa-linkedin"></i></a> {''}
+      <a href="mailto:ashwagsaudalrougui@gmail.com"><i class="fa fa-envelope"style={{ backgroundColor: 'white', color: '#A4C0E4' }}></i></a> {''}
+
+  <a href="https://www.linkedin.com/in/ashwagalrouguisoftwareengineer/"><i class="fa fa-linkedin"></i></a> {''}
   <p><div class="black">Contact</div></p>
       </Card.Footer>
     </Card>
@@ -103,7 +107,9 @@ render(){
       </Card.Body>
       <Card.Footer>
       <a href="https://github.com/aaltwaim"><i class="fa fa-github"style={{ backgroundColor: 'white', color: 'black' }}></i></a> {''}
-  <a href="#"><i class="fa fa-linkedin"></i></a> {''}
+      <a href="mailto:a_t1411@hotmail.com"><i class="fa fa-envelope"style={{ backgroundColor: 'white', color: '#A4C0E4' }}></i></a> {''}
+
+  <a href="https://sa.linkedin.com/in/abdullah-electrical-engineer?trk=public_profile_browsemap_profile-result-card_result-card_full-click"><i class="fa fa-linkedin"></i></a> {''}
   <p><div class="black">Contact</div></p>
       </Card.Footer>
     </Card>

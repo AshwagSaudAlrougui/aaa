@@ -56,4 +56,12 @@ a.header__link:hover {
 }
 .github{
     padding-right: 40px;
+   /* background:white;*/
+   color:white 
+}
+a:hover{
+
+    background: inherit;
+    color: white!important;
+    ;
 }

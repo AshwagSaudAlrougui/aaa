@@ -3,7 +3,7 @@ import Home from './Home'
 import './Nav.css';
 import Nav from './Nav'
 import AboutUs from './AboutUs'
-import FirstPage from './FirstPage'
+import Welcome from './Welcome'
 
 
 import {
@@ -31,10 +31,10 @@ export default function App() {
         <div>
             <Switch>
           <Route exact path="/" component={Home} />
-          <Route path="/FirstPage" component={FirstPage} />
+          <Route path="/Welcome" component={Welcome} />
           <Route path="/AboutUs" component={AboutUs} />
      
-          <Route component={FirstPage} />
+          <Route component={Home} />
           </Switch>
         </div>
       </HashRouter>
