@@ -18,7 +18,7 @@ let apiCallCount = 0;
 class Home extends Component {
 
   state = {
-    id: 62,
+    id: 77,
   scene: {},
   isEnd: false,
   isLeft: true,
@@ -73,6 +73,7 @@ class Home extends Component {
             })
       console.log(this.state.id)
   this.callApi(this.state.scene.right_id)
+  
     }
 
     else 
@@ -93,6 +94,7 @@ class Home extends Component {
     }).then(response => {
       
       this.setState({scene: response.data}) 
+      console.log(this.state.id)
     
     }).catch(error => console.log(error));
   }
@@ -147,11 +149,20 @@ this.callApi(this.state.scene.left_id)
   }
 
 
+  back = () => {
+    this.setState({
+      id: this.state.scene.prev_id
+    })
+    this.callApi(this.state.scene.prev_id)
+  }
+
+
+
   render() {
     if (this.state.isEnd)
-      return <NewScene isLeft={this.state.isLeft} id={this.state.newID} updateView={this.updateView}/>
+      return <NewScene isLeft={this.state.isLeft} id={this.state.newID} scene_id={this.state.scene.id} updateView={this.updateView}/>
       else
-      return <Scene scene={this.state.scene} prev={this.Prev} next={this.Next}/>
+      return <Scene scene={this.state.scene} prev={this.Prev} next={this.Next} back={this.back}/>
     
   }
 }
