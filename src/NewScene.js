@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import { Input , Segment  , Form , Button , TextArea} from 'semantic-ui-react';
 import axios from 'axios';
-import InputGroup from 'react-bootstrap/InputGroup';
 export default class NewScene extends Component {
     state = {
         scene_text:'',
