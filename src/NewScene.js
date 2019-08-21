@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
-import { Input , Segment  , Form , Button} from 'semantic-ui-react';
+import { Input , Segment  , Form , Button , TextArea} from 'semantic-ui-react';
 import axios from 'axios';
-
+import InputGroup from 'react-bootstrap/InputGroup';
 export default class NewScene extends Component {
     state = {
         scene_text:'',
@@ -90,8 +90,9 @@ export default class NewScene extends Component {
             <h4 class="ui horizontal inverted divider">
           Add
         </h4>
-        
-        <Input fluid icon='search' style={{"text-align": "center"}}  placeholder='Enter your part of the story here..' value= {this.state.scene_text} onChange= {(v) => this.handleSceneText(v)} />
+        <Form>
+        <TextArea placeholder='Enter your part of the story here..' value= {this.state.scene_text} onChange= {(v) => this.handleSceneText(v)} />
+        </Form>
 
       </div>
 
