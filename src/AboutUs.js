@@ -20,23 +20,10 @@ class AboutUs extends Component{
 
     axios.get('https://api.github.com/users/AlkhaldiAzzam').then(response => this.setState({azzam: response.avatar_url})).catch(error => console.log(error))
     axios.get('https://api.github.com/users/ASSROUGUI').then(response => this.setState({ashwaq: response.avatar_url})).catch(error => console.log(error))
-    axios.get('https://api.github.com/users/aaltwaim').then(response => this.setState({abdullah: response.avatar_url})).catch(error => console.log(error))
-
-
-  }
-
+    axios.get('https://api.github.com/users/aaltwaim').then(response => this.setState({abdullah: response.avatar_url})).catch(error => console.log(error)) }
 render(){
-
-
-
-
-
     return(
-     
-
 <div>
-
-
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
 <link
   rel="stylesheet"
@@ -44,25 +31,8 @@ render(){
   integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
   crossorigin="anonymous"
 />
-{/* <script src="https://unpkg.com/react/umd/react.production.min.js" crossorigin /> */}
-
-{/* <script
-  src="https://unpkg.com/react-dom/umd/react-dom.production.min.js"
-  crossorigin
-/> */}
-
-{/* <script
-  src="https://unpkg.com/react-bootstrap@next/dist/react-bootstrap.min.js"
-  crossorigin
-/> */}
-
-
-  
-
 <div class ='aboutUs'>About Us</div>
-
 <CardGroup>
-    
     <Card>
       <Card.Img variant="top" src= {this.state.azzam} />
       <Card.Body>
@@ -72,7 +42,6 @@ render(){
         </Card.Text>
       </Card.Body>
       <Card.Footer>
-   
  <a href="https://github.com/AlkhaldiAzzam"><i class="fa fa-github"style={{ backgroundColor: 'white', color: 'black' }}></i></a> {''}
  <a href="mailto:azzamalkhaldi74@gmail.com"><i class="fa fa-envelope"style={{ backgroundColor: 'white', color: '#A4C0E4' }}></i></a> {''}
 
